@@ -46,16 +46,16 @@ fi
 # Run the test directly in a docker container
 docker run \
   $tty_opts \
-  -u=gonano \
+  -u=gomicro \
   --privileged=true \
   --workdir=/test \
   -e "PATH=$(path)" \
   --volume=${test_dir}/:/test \
   --volume=${engine_dir}/:/engine \
-  --volume=/home/vagrant/ssh:/home/gonano/.ssh \
+  --volume=/home/vagrant/ssh:/home/gomicro/.ssh \
   --volume=/tmp/pkgsrc:/data/var/db/pkgin/cache \
   --rm \
-  nanobox/build \
+  mubox/build \
   /test/util/bats/bin/bats \
     /test/tests/${file} \
       2>&1 \

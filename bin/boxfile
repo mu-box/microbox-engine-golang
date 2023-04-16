@@ -3,7 +3,7 @@
 # vim: ts=2 sw=2 ft=bash noet
 
 # source the Nos framework
-. /opt/nanobox/nos/common.sh
+. /opt/microbox/nos/common.sh
 
 # initialize Nos with the original arguments
 nos_init "$@"
@@ -21,7 +21,7 @@ if [ -z "$(nos_payload "config_package")" ]; then
 	>&2 echo ""
 	>&2 echo "run.config:"
 	>&2 echo "  engine.config:"
-	>&2 echo "    package: github.com/nanobox-io/nanobox"
+	>&2 echo "    package: github.com/mu-box/microbox"
 	>&2 echo
 	>&2 echo "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"
 	>&2 echo

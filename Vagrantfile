@@ -23,7 +23,7 @@ Vagrant.configure(2) do |config|
 
       # add the source to our apt sources
       echo \
-        "deb https://apt.dockerproject.org/repo ubuntu-trusty main \n" \
+        "deb https://download.docker.com/linux/ubuntu trusty main \n" \
           > /etc/apt/sources.list.d/docker.list
 
       # update the package index
@@ -56,7 +56,7 @@ Vagrant.configure(2) do |config|
   # pull the build image to run tests in
   config.vm.provision "shell", inline: <<-SCRIPT
     echo "Pulling the build image"
-    docker pull nanobox/build
+    docker pull mubox/build
   SCRIPT
 
   # copy the ssh keys

@@ -11,14 +11,14 @@ engine_dir="$(dirname ${test_dir})"
 
 docker run \
   -it \
-  -u=gonano \
+  -u=gomicro \
   --privileged=true \
   --workdir=/test \
   -e "PATH=$(path)" \
   --volume=${test_dir}/:/test \
   --volume=${engine_dir}/:/engine \
-  --volume=/home/vagrant/ssh:/home/gonano/.ssh \
+  --volume=/home/vagrant/ssh:/home/gomicro/.ssh \
   --volume=/tmp/pkgsrc:/data/var/db/pkgin/cache \
   --rm \
-  nanobox/build \
+  mubox/build \
   /bin/bash

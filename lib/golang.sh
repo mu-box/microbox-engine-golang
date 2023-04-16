@@ -68,7 +68,7 @@ build_cmd() {
 #
 # The strategy is to create a hidden directory (.gopath) in the app directory,
 # which is also a lib_dir, and use it as the GOPATH. This allows the gopath
-# to be re-used between builds and also shared in 'nanobox dev'. Then we
+# to be re-used between builds and also shared in 'microbox dev'. Then we
 # will symlink the app source inside of the .gopath at the package location
 # which is specified in the config section of the boxfile.yml.
 prep_env() {
@@ -99,7 +99,7 @@ clean_env() {
 fetch_deps() {
   cd $(package_path)
   # fetch dependencies
-  nos_run_process "Fetching dependencies" "$(fetch_cmd)"  
+  nos_run_process "Fetching dependencies" "$(fetch_cmd)"
   cd - >/dev/null
 }
 

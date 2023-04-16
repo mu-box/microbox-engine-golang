@@ -1,4 +1,4 @@
 run.config:
   engine: golang
   engine.config:
-    package: github.com/nanobox-io/purple
+    package: github.com/mu-box/purple
